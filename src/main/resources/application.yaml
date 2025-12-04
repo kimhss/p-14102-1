@@ -6,9 +6,17 @@ spring:
   output:
     ansi:
       enabled: always
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false
   datasource:
     hikari:
       auto-commit: false
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
   jpa:
     show-sql: true
     hibernate:
